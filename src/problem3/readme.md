@@ -30,6 +30,14 @@
 - **Why It's a Problem:** Accessing `prices[balance.currency]` multiple times within the same computation is inefficient.
 - **Solution:** Calculate the USD value once during the transformation step and reuse it.
 
+**Refactor Explanation:**
+Previously, prices[balance.currency] might have been accessed multiple times in separate operations (e.g., during mapping or in the JSX rendering). In this refactored code:
+
+The usdValue is calculated in the map method as part of the transformation process.
+The result is stored in the usdValue field of the FormattedWalletBalance object.
+Later, this pre-computed value (usdValue) is reused directly in the rows mapping.
+This eliminates redundant lookups of prices[balance.currency] during subsequent processing, ensuring computational efficiency and cleaner code.
+
 ### 6. **Index as Key in `WalletRow`**
 
 - **Where:** The `rows` map uses the array index (`key={index}`).
