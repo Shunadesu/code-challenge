@@ -35,4 +35,10 @@ export default [
       ],
     },
   },
+  {
+    "extends": ["plugin:react/recommended"],
+    "rules": {
+      "react/no-unknown-property": ["error", { "ignore": ["rotation"] }]
+    }
+  },
 ]

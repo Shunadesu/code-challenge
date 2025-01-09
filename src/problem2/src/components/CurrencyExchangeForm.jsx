@@ -46,12 +46,12 @@ const CurrencyExchangeForm = () => {
     };
 
     return (        
-            <div className="text-[#bdaf86] transition-all duration-500 max-w-[800px] w-full mx-auto p-6 border border-black bg-white rounded-lg shadow-lg hover:border hover:border-blue-300">
+            <div className="z-20 transition-all duration-500 max-w-[800px] w-full mx-auto p-6 border border-black bg-white rounded-lg shadow-lg hover:border hover:border-blue-300">
                 <h2 className="text-2xl font-bold text-center mb-4">Currency Exchange</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-4">
-                        <label className="block text-xl font-medium text-[#bdaf86] mb-1">
+                        <label className="block text-xl font-medium  mb-1">
                             Amount
                         </label>
                         <input
@@ -71,7 +71,7 @@ const CurrencyExchangeForm = () => {
                     </div>
 
                     <div className="mb-4">
-                        <label className="block text-xl font-medium text-[#bdaf86] mb-1">
+                        <label className="block text-xl font-medium  mb-1">
                             From
                         </label>
                         <div className="flex items-center space-x-2">
@@ -100,7 +100,7 @@ const CurrencyExchangeForm = () => {
                     </div>
         
                     <div className="mb-4">
-                        <label className="block text-xl font-medium text-[#bdaf86] mb-1">
+                        <label className="block text-xl font-medium  mb-1">
                             To
                         </label>
                         <div className="flex items-center space-x-2">
@@ -130,7 +130,7 @@ const CurrencyExchangeForm = () => {
 
                     <button
                         type="submit"
-                        className="w-full mt-4 text-xl bg-[#bdaf86] text-white py-2 px-4 rounded-lg hover:bg-[#9c8d62]"
+                        className="w-full mt-4 text-xl bg-black text-white py-2 px-4 rounded-lg hover:bg-[#2a2929]"
                     >
                         Convert
                     </button>
@@ -153,9 +153,9 @@ const CurrencyExchangeForm = () => {
                                 <button
                                     type="button"
                                     onClick={handleSwap}
-                                    className="text-[#bdaf86] py-2 px-4 rounded-full transition"
+                                    className=" py-2 px-4 rounded-full transition"
                                 >
-                                    <span className="w-full text-xl bg-[#bdaf86] text-white py-2 px-4 rounded-lg hover:bg-[#9c8d62]">
+                                    <span className="w-full text-xl bg-black text-white py-2 px-4 rounded-lg hover:bg-[#2a2929]">
                                         Swap
                                     </span> {/* Swap icon */}
                                 </button>
